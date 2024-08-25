@@ -57,36 +57,45 @@
     macros {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        media_layer {
+            bindings = <&mo 3>;
+            key-positions = <65 70>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &tog 1                                                                   &mo 5  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T      &none                                                                    &none  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &hr_l 1 G  &none      &kp LCTRL  &kp LALT              &kp LGUI      &kp RCTRL      &none  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                            &kp HOME              &kp DEL                             &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 4      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp SPACE  &kp ENTER  &kp LEFT_CONTROL      &kp LEFT_ALT  &kp BACKSPACE  &mo 2          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 4
+&kp EQUAL           &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &tog 1                                                                   &mo 5  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp TAB             &kp Q      &kp W     &kp E     &kp R      &kp T      &none                                                                    &none  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC             &kp A      &kp S     &kp D     &kp F      &hr_l 1 G  &none      &kp TAB    &kp K_PASTE           &kp LGUI      &kp K_UNDO     &none  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
+&hm LSHFT CAPSLOCK  &kp Z      &kp X     &kp C     &kp V      &kp B                            &kp K_COPY            &kp DEL                             &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+&mo 4               &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp SPACE  &kp ENTER  &kp LEFT_CONTROL      &kp LEFT_ALT  &kp BACKSPACE  &mo 2          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 4
             >;
         };
 
         keypad {
             bindings = <
-&kp EQUAL  &kp EXCLAMATION  &kp AT_SIGN           &kp POUND              &kp DOLLAR     &kp PERCENT       &trans                                             &mo 5   &kp N6     &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp TAB    &kp AMPERSAND    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp BACKSLASH     &none                                              &none   &kp Y      &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp ESC    &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI       &kp G             &none   &kp LCTRL  &kp LALT      &kp LGUI  &trans  &none   &kp H      &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp MINUS        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN  &kp GREATER_THAN                     &kp HOME      &trans                    &kp KP_N0  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 4      &kp GRAVE        &kp CAPS              &kp LEFT               &kp RIGHT                        &trans  &trans     &trans        &trans    &trans  &trans             &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 4
+&kp EQUAL  &kp EXCLAMATION  &kp AT_SIGN           &kp POUND              &kp DOLLAR     &kp PERCENT       &trans                                        &mo 5   &kp N6     &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp TAB    &kp AMPERSAND    &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp BACKSLASH     &none                                         &none   &kp Y      &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp ESC    &kp SQT          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI       &kp G             &none   &trans  &trans      &kp LGUI  &trans  &none   &kp H      &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp MINUS        &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN  &kp GREATER_THAN                  &trans      &trans                    &kp KP_N0  &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 4      &kp GRAVE        &kp CAPS              &kp LEFT               &kp RIGHT                        &trans  &trans  &trans      &trans    &trans  &trans             &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 4
             >;
         };
 
         symbols {
             bindings = <
-&none      &none      &none                 &none                  &none          &none        &trans                                             &mo 5   &none        &none              &none          &none             &trans          &none
-&kp TAB    &kp GRAVE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp MINUS    &none                                              &none   &kp AT_SIGN  &kp AMPS           &kp ASTERISK   &kp PLUS          &kp BACKSLASH   &none
-&kp ESC    &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp PERCENT  &none   &kp LCTRL  &kp LALT      &kp LGUI  &trans  &none   &kp PIPE     &kp DOUBLE_QUOTES  &kp EQUAL      &kp HASH          &kp COLON       &none
-&kp LSHFT  &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp DOLLAR                      &kp HOME      &trans                    &kp TILDE    &kp EXCLAMATION    &kp LESS_THAN  &kp GREATER_THAN  &kp UNDERSCORE  &kp RSHFT
-&mo 4      &none      &none                 &none                  &none                       &trans  &trans     &trans        &trans    &trans  &trans               &none              &none          &none             &none           &mo 4
+&none      &none      &none                 &none                  &none          &none        &trans                                        &mo 5   &none        &none              &none          &none             &trans          &none
+&kp TAB    &kp GRAVE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp MINUS    &none                                         &none   &kp AT_SIGN  &kp AMPS           &kp ASTERISK   &kp PLUS          &kp BACKSLASH   &none
+&kp ESC    &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp PERCENT  &none   &trans  &trans      &kp LGUI  &trans  &none   &kp PIPE     &kp DOUBLE_QUOTES  &kp EQUAL      &kp HASH          &kp COLON       &none
+&kp LSHFT  &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp DOLLAR                   &trans      &trans                    &kp TILDE    &kp EXCLAMATION    &kp LESS_THAN  &kp GREATER_THAN  &kp UNDERSCORE  &kp RSHFT
+&mo 4      &none      &none                 &none                  &none                       &trans  &trans  &trans      &trans    &trans  &trans               &none              &none          &none             &none           &mo 4
             >;
         };
 
