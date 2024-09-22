@@ -64,11 +64,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &tog 1                                                                   &mo 5  &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp CLCK   &kp Q      &kp W     &kp E     &kp R      &kp T      &none                                                                    &none  &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &hr_l 1 G  &mo 3      &kp TAB    &kp C_AC_COPY         &kp LGUI      &kp C_AC_UNDO  &none  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &caps_word
-&sk LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                            &kp C_AC_PASTE        &kp DEL                             &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
-&mo 4      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp SPACE  &kp ENTER  &kp LEFT_CONTROL      &kp LEFT_ALT  &kp BACKSPACE  &mo 2          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 4
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &tog 1                                                                   &mo 5      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
+&kp CLCK   &kp Q      &kp W     &kp E     &kp R      &kp T      &none                                                                    &none      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
+&kp ESC    &kp A      &kp S     &kp D     &kp F      &hr_l 1 G  &mo 3      &kp TAB    &kp LC(C)             &kp LGUI      &kp LC(Z)      &kp LC(A)  &kp H   &kp J   &kp K      &kp L     &kp SEMI  &caps_word
+&sk LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                            &kp LC(V)             &kp DEL                                 &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &sk RSHFT
+&mo 4      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT             &kp SPACE  &kp ENTER  &kp LEFT_CONTROL      &kp LEFT_ALT  &kp BACKSPACE  &mo 2              &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 4
             >;
         };
 
@@ -84,11 +84,11 @@
 
         symbols {
             bindings = <
-&none      &none      &none                 &none                  &none          &none        &trans                                        &mo 5   &none        &none              &none          &none             &trans          &none
-&kp TAB    &kp GRAVE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp MINUS    &none                                         &none   &kp AT_SIGN  &kp AMPS           &kp ASTERISK   &kp PLUS          &kp BACKSLASH   &none
-&kp ESC    &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp PERCENT  &none   &trans  &trans      &kp LGUI  &trans  &none   &kp PIPE     &kp DOUBLE_QUOTES  &kp EQUAL      &kp HASH          &kp COLON       &none
-&kp LSHFT  &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp DOLLAR                   &trans      &trans                    &kp TILDE    &kp EXCLAMATION    &kp LESS_THAN  &kp GREATER_THAN  &kp UNDERSCORE  &kp RSHFT
-&mo 4      &none      &none                 &none                  &none                       &trans  &trans  &trans      &trans    &trans  &trans               &none              &none          &none             &none           &mo 4
+&none      &none      &none                 &none                  &none          &none        &trans                                           &mo 5   &none        &none              &none          &none             &trans          &none
+&kp TAB    &kp GRAVE  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SLASH      &kp MINUS    &none                                            &none   &kp AT_SIGN  &kp AMPS           &kp ASTERISK   &kp PLUS          &kp BACKSLASH   &none
+&kp ESC    &kp SQT    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &kp PERCENT  &trans  &trans  &kp LC(X)      &kp LGUI  &trans  &trans  &kp PIPE     &kp DOUBLE_QUOTES  &kp EQUAL      &kp HASH          &kp COLON       &none
+&kp LSHFT  &kp CARET  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION   &kp DOLLAR                   &trans         &trans                    &kp TILDE    &kp EXCLAMATION    &kp LESS_THAN  &kp GREATER_THAN  &kp UNDERSCORE  &kp RSHFT
+&mo 4      &none      &none                 &none                  &none                       &trans  &trans  &trans         &trans    &trans  &trans               &none              &none          &none             &none           &mo 4
             >;
         };
 
